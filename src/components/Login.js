@@ -6,7 +6,7 @@ const userCredentials = {
   password: "",
 };
 
-function Login() {
+function Login(props) {
   const [credentials, setCredentials] = useState(userCredentials);
 
   const handleChange = (e) => {
@@ -22,7 +22,7 @@ function Login() {
       .post("http://localhost:9000/api/login", credentials)
       .then((resp) => {
         localStorage.setItem("token", resp.data.token);
-        history.push("/friendlist");
+        props.history.push("/friendlist");
       })
       .catch((err) => {
         console.log(err);

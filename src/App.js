@@ -5,6 +5,8 @@ import "./styles/Header.css";
 import Login from "./components/Login";
 import FriendsList from "./components/FriendsList";
 
+import PrivateRoute from "./components/PrivateRoute";
+
 function App() {
   return (
     <Router>
@@ -26,7 +28,7 @@ function App() {
           </h3>
         </div>
         <Switch>
-          <Route exact path="/friendlist" component={FriendsList} />
+          <PrivateRoute exact path="/friendlist" component={FriendsList} />
           <Route path="/login" component={Login} />
           <Route path="/" component={Login} />
         </Switch>
