@@ -4,6 +4,10 @@ import axiosWithAuth from "../utils/axiosWithAuth";
 function FriendsList() {
   const [friendList, setFriendList] = useState([]);
 
+  const handleDelete = () => {
+    console.log("clicking");
+  };
+
   useEffect(() => {
     return axiosWithAuth()
       .get("/friends")
@@ -21,9 +25,10 @@ function FriendsList() {
       <h2>Friend List</h2>
       {friendList.map((friend, idx) => {
         return (
-          <h4>
-            name: {friend.name}----email: {friend.email}
-          </h4>
+          <li key={idx}>
+            name: {friend.name} -- email: {friend.email} -- age: {friend.age}
+            <button onSubmit={handleDelete}>Remove friend</button>
+          </li>
         );
       })}
     </div>
