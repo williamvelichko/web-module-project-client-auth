@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axiosWithAuth from "../utils/axiosWithAuth";
 
 import { useHistory } from "react-router-dom";
+import "./../styles/AddFriend.css";
 
 const newFriend = {
   name: "",
@@ -34,35 +35,32 @@ function AddFriend() {
   };
 
   return (
-    <div>
+    <div className="addfriend">
       <form onSubmit={handleSubmit}>
-        <label>
-          Friend name:
-          <input
-            type="text"
-            name="name"
-            value={addFriend.name}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Add Email:
-          <input
-            type="email"
-            name="email"
-            value={addFriend.email}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Add Age:
-          <input
-            type="number"
-            name="age"
-            value={addFriend.age}
-            onChange={handleChange}
-          />
-        </label>
+        <label>Friend name:</label>
+        <input
+          type="text"
+          name="name"
+          value={addFriend.name}
+          onChange={handleChange}
+        />
+
+        <label>Add Email:</label>
+        <input
+          type="email"
+          name="email"
+          value={addFriend.email}
+          onChange={handleChange}
+        />
+
+        <label>Add Age:</label>
+        <input
+          type="number"
+          name="age"
+          value={addFriend.age}
+          onChange={handleChange}
+        />
+
         {/* <label>
           Add Friend ID:
           <input

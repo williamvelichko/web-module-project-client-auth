@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
+
+import "./../styles/Login.css";
+
 const userCredentials = {
   username: "",
   password: "",
@@ -30,24 +33,26 @@ function Login(props) {
   };
 
   return (
-    <div>
-      <h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="username"
-            value={credentials.username}
-            onChange={handleChange}
-          />
-          <input
-            type="password"
-            name="password"
-            value={credentials.password}
-            onChange={handleChange}
-          />
-          <button>Log In</button>
-        </form>
-      </h1>
+    <div className="login">
+      <form onSubmit={handleSubmit}>
+        <label>username:</label>
+        <input
+          type="text"
+          name="username"
+          value={credentials.username}
+          onChange={handleChange}
+        />
+
+        <label>password:</label>
+        <input
+          type="password"
+          name="password"
+          value={credentials.password}
+          onChange={handleChange}
+        />
+
+        <button>Log In</button>
+      </form>
     </div>
   );
 }

@@ -16,18 +16,19 @@ function App() {
       <div className="App">
         <div className="header">
           <h1>FRIENDS DATABASE</h1>
+          <div className="navbar">
+            <h3>
+              <Link to="/login">Login</Link>
+            </h3>
 
-          <h3>
-            <Link to="/login">Login</Link>
-          </h3>
+            <h3>{isLoggedIn && <Link to="/friendlist">FriendList</Link>}</h3>
 
-          <h3>{isLoggedIn && <Link to="/friendlist">FriendList</Link>}</h3>
+            <h3>{isLoggedIn && <Link to="/addfriend">AddFriend</Link>}</h3>
 
-          <h3>{isLoggedIn && <Link to="/addfriend">AddFriend</Link>}</h3>
-
-          <h3>
-            <Link to="/logout">Logout</Link>
-          </h3>
+            <h3>
+              <Link to="/logout">Logout</Link>
+            </h3>
+          </div>
         </div>
         <Switch>
           <PrivateRoute exact path="/friendlist" component={FriendsList} />

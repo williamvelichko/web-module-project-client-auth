@@ -1,0 +1,29 @@
+.addfriend,
+input {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.addfriend {
+  display: flex;
+  justify-content: center;
+
+  width: 30%;
+  margin: auto;
+  background-color: cornflowerblue;
+  margin-top: 50px;
+}
+.addfriend,
+label {
+  font-family: Verdana;
+  font-size: 2rem;
+}
+
+.addfriend button {
+  padding: 8px;
+  width: 70%;
+  font-size: 1rem;
+}

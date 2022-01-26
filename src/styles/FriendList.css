@@ -1,0 +1,28 @@
+.friendlist_container {
+  width: 50%;
+  margin: auto;
+  background-color: cornflowerblue;
+  margin-top: 20px;
+}
+
+.friend {
+  margin-top: 50px;
+}
+.friend,
+h4 {
+  font-family: Verdana;
+  font-size: 1.5rem;
+}
+.friend,
+button {
+  width: 50%;
+  margin: auto;
+  padding: 7px;
+  font-size: 1rem;
+}
+.friendlist_container,
+h2 {
+  padding: 10px;
+  font-size: 2rem;
+  font-family: Verdana;
+}

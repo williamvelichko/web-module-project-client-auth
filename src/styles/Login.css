@@ -1,0 +1,25 @@
+.login,
+input {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: auto;
+  background-color: cornflowerblue;
+  margin-top: 50px;
+}
+.login,
+label {
+  font-family: Verdana;
+  font-size: 2rem;
+}
+
+.login button {
+  padding: 8px;
+  width: 70%;
+  font-size: 1rem;
+}
